@@ -1,0 +1,7 @@
+﻿  main.cpp
+E:\visual studio code\saját projekt\github local\cpp-facial-recognition-with-opencv\cpp-facial-recognition-with-opencv\cpp-facial-recognition-with-opencv\main.cpp(10,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 70 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  cpp-facial-recognition-with-opencv.vcxproj -> E:\visual studio code\saját projekt\github local\cpp-facial-recognition-with-opencv\cpp-facial-recognition-with-opencv\x64\Release\cpp-facial-recognition-with-opencv.exe
