@@ -1,4 +1,3 @@
-# cpp-facial-recognition-with-opencv
 Ezt a projeketet a projekt feladatra készítem.
 A koncecpió, hogy egy weboldalon fel lehet venni 
 egy arcot amit egy adatbázisban eltárolok és egy rasberry pi-vel
