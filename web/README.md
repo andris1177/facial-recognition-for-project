@@ -6,3 +6,7 @@ utánna ./setup.ps1
 A server futtatása
 cd /website
 py manage.py runserver
+
+linux:
+chmod +x setup.sh
+./setup.sh
