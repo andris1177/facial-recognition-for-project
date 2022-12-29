@@ -1,8 +1,4 @@
-# Projekt célca
-
-Ez egy arcfelismerő program és hozzátartozó admin weboldal python-al és opencv-vel
-
-## használata
+# használata
 
 ### windows
 
