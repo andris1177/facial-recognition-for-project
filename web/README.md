@@ -8,7 +8,7 @@ Ez egy arcfelismerő program és hozzátartozó admin weboldal python-al és ope
 
 Első lépés hogy meg kell nyitni a powershelt rendszergazdaként.
 A futtatáshoz elösször engedélyezni kell hogy lehessen futtatni scripteket
-powrshel
+```powrshel
 Set-ExecutionPolicy RemoteSigned
 ```
 
