@@ -37,5 +37,5 @@ A script futtatása
 A szerver futtatása
 ```BASH
 cd /website
-py manage.py runserver
+python manage.py runserver
 ```
