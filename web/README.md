@@ -6,19 +6,36 @@ Ez egy arcfelismerő program és hozzátartozó admin weboldal python-al és ope
 
 ### windows
 
-### linux
-windows:
 Első lépés hogy meg kell nyitni a powershelt rendszergazdaként.
-A futtatáshoz elösször engedélyezni kell hoyg lehessen futtatni scripteket "Set-ExecutionPolicy RemoteSigned"
-utánna ./setup.ps1
+A futtatáshoz elösször engedélyezni kell hogy lehessen futtatni scripteket
+'''powrshel
+Set-ExecutionPolicy RemoteSigned
+'''
+
+A script futtatása
+'''powershel
+./setup.ps1
+'''
 
 A server futtatása
+'''powershel
 cd /website
 py manage.py runserver
+'''
 
-linux:
+### linux
+A script futtathatóvá tétele
+'''bash
 chmod +x setup.sh
-./setup.sh
+'''
 
+A script futtatása
+'''bas
+./setup.sh
+'''
+
+A szerver futtatása
+'''BASH
 cd /website
 py manage.py runserver
+'''
