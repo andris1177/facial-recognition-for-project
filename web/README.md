@@ -22,7 +22,7 @@ py manage.py runserver
 ### linux
 A script futtathatóvá tétele
 ```bash
-chmod +x setup.sh
+chmod +x setup.shs
 ```
 
 A script futtatása
@@ -34,4 +34,14 @@ A szerver futtatása
 ```BASH
 cd /website
 python manage.py runserver
+```
+
+a django projekt létrehozáse
+```bash
+django-admin startproject webapp
+```
+
+alkalmazás létrehozása
+```bash
+py manage.py startapp website
 ```
