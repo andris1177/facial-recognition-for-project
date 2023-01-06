@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClCompile Include="src\teszt.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="src\haarcascade_frontalface_default.xml" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
