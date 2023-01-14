@@ -1,3 +1,8 @@
 web/images
 local/windows/dependences/opencv
 local/windows/.vs/FaceRec/v17/ipch/AutoPCH/a385ad79a311e55e/TESZT.ipch
+local/linux/CMakeCache.txt
+local/linux/cmake_install.cmake
+local/linux/main
+local/linux/Makefile
+local/linux/CMakeFiles/
