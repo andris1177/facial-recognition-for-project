@@ -1,4 +1,4 @@
-<!--login-->
+<!--sign up-->
 <!DOCTYPE html>
     <html lang="hu">
         <head>
@@ -6,14 +6,15 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
-            <title>Login</title>
+            <title>Register</title>
         </head>
         <body>
-            <form name="f1" action = "login.php" onsubmit = "return validation()" method = "POST">
+            <form name="f1" action = "register.php" onsubmit = "return validation()" method = "POST">
             <div>
 
                 <h1>
-                    LOGIN
+                    Register <br>
+                    a speciális kód mot 123456789
                 </h1>
 
                 <p>
@@ -32,20 +33,28 @@
                     <input type="password", id="pass" name="pass">
                 </p>
 
+                <p>
+                    <label>
+                        Special Code:
+                    </label>
+
+                    <input type="text", id="spec" name="spec">
+                </p>
+
                 <p>     
-                    <input type =  "submit" id = "btn" value = "Login" />  
+                    <input type =  "submit" id = "btn" value = "register" />  
                 </p>
 
                 <p>
                     <label>
-                        if you don't have a profile yet, register
+                        if you  have a profile login
                     </label>
 
                     <p>     
-                        <input type =  "submit" id = "reg" value = "Register" />  
+                        <input type =  "submit" id = "reg" value = "Login" />  
                     </p>
                 </p>
             </div>
-            <script src="login.js"></script>  
+            <script src="register.js"></script>  
         </body>
     </html>
