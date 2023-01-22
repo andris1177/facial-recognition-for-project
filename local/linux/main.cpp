@@ -1,39 +1,27 @@
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc.hpp>
 #include <iostream>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/objdetect.hpp>
 
 int main()
 {
-	std::cout << "esc to quit" << std::endl;
-
-	std::string image_path = "../../../web/images/";
-
-	cv::Mat webcam;
-	cv::namedWindow("Webcam preview");
-	cv::VideoCapture cap(0);
-	if (!cap.isOpened())
-	{
-		std::cout << "No webcam detected!" << std::endl;
-		return -1;
-	}
-
+	cv::VideoCapture video(0);
+	cv::CascadeClassifier facedetect;
+	cv::Mat img;
+	facedetect.load("/media/andris1177/ssd-adatok-linux/github-local/facial-recognition-for-project/local/linux/cascades/haarcascades/haarcascade_frontalface_default.xml");
 	while (true)
 	{
-		cap >> webcam;
-		if (webcam.empty())
+		video.read(img);
+		std::vector<cv::Rect> faces;
+		facedetect.detectMultiScale(img, faces, 1.3, 5);
+		for (int i = 0; i < faces.size(); i++)
 		{
-			break;
+			cv::rectangle(img, faces[i].tl(), faces[i].br(), cv::Scalar(50, 50, 255), 3);
 		}
-
-		cv::imshow("Webcam preview", webcam);
-		char c = (char)cv::waitKey(25);
-		if (c == 27)
-		{
-			break;
-		}
+		cv::imshow("Preview", img);
+		cv::waitKey(1);
 	}
 
 	return 0;
-
 }
