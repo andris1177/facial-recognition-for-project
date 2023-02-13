@@ -1,13 +1,20 @@
-div{
-    border: 1px solid black;
-    width: 50%;
+#indexDiv{
+    background-color: lightslategray;
     margin: auto;
+    width: 600px;
+    height: 200px;
     text-align: center;
-    background-color: white;
 }
 
-body{
-    background-color: lightgray;
+#loginDiv{
+    background-color: lightslategray;
+    margin: auto;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+}
+
+.indexButton{
     color: black;
+    border-radius: 15%;
 }
-

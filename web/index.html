@@ -1,4 +1,3 @@
-<!--login-->
 <!DOCTYPE html>
     <html lang="hu">
         <head>
@@ -6,46 +5,27 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
-            <title>Login</title>
+            <title>Facial Recognition For Project</title>
         </head>
         <body>
-            <form name="f1" action = "login.php" onsubmit = "return validation()" method = "POST">
-            <div>
-
+            <div id="indexDiv">
                 <h1>
-                    LOGIN
+                    Facel Recognition admin panel
                 </h1>
 
-                <p>
-                    <label>
-                        Username: 
-                    </label>
+                <br>
+                <br>
 
-                    <input type="text" id="user" name="user">
-                </p>
+                <a href="login/login.html">
+                    <button class="indexButton">Login</button>
+                </a>
 
-                <p>
-                    <label>
-                        Password:
-                    </label>
+                <br>
+                <br>
 
-                    <input type="password", id="pass" name="pass">
-                </p>
-
-                <p>     
-                    <input type =  "submit" id = "btn" value = "Login" />  
-                </p>
-
-                <p>
-                    <label>
-                        if you don't have a profile yet, register
-                    </label>
-
-                    <p>
-                        <a href="register.html">Register</a>
-                    </p>
-                </p>
-            </div>  
-            <script src="login.js"></script>
+                <a href="sign up/signup.html">
+                    <button class="indexButton">Sign Up</button>
+                </a>
+            </div>
         </body>
     </html>
