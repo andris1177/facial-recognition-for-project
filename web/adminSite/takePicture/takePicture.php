@@ -1,6 +1,6 @@
 <?php
-    
     $img = $_POST['image'];
+    $imagename = $_POST['imagename'];
     $folderPath = "images/";
   
     $image_parts = explode(";base64,", $img);
@@ -8,9 +8,9 @@
     $image_type = $image_type_aux[1];
   
     $image_base64 = base64_decode($image_parts[1]);
-    $fileName = uniqid() . '.png';
+    $fileName = $imagename . '.jpg';
   
     $file = $folderPath . $fileName;
     file_put_contents($file, $image_base64);
-    echo "The image has saved to the server"
+    echo "The image has saved to the server";
 ?>
