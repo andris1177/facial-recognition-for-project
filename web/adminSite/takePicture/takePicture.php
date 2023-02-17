@@ -12,5 +12,6 @@
   
     $file = $folderPath . $fileName;
     file_put_contents($file, $image_base64);
-    echo "The image has saved to the server";
+    header("Location: takePicture.html");
+    exit;
 ?>
