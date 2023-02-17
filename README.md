@@ -14,15 +14,17 @@ https://github.com/opencv/opencv/releases/tag/4.7.0
 Linux használatához telepíteni kell az OpneCV-t amihez itt egy tutorial:
 https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/
 
-utánna futtatni kell a cmak-et
-``` bash
-cmake .
-```
 
-``` bash 
+``` bash
+git clone https://github.com/andris1177/facial-recognition-for-project.git
+cd  facial-recognition-for-project/local/linux
+mkdir build
+cd build
+cmake ../
 make
 ```
 
-``` bash
+futtatás
+``` bas
 ./main
 ```
