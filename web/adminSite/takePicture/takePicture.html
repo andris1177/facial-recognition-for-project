@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>
+        Add face
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <div id="captureImage">
+        <h1>
+            Add faces
+        </h1>
+
+        <form method="POST" action="http://localhost/adminSite/takePicture/takePicture.php">
+            <div>
+                <div>
+                    <div id="my_camera"></div>
+                    <br/>
+                    <input type="button" value="Take Snapshot" onClick="take_snapshot()" />
+                    <input type="hidden" name="image" class="image-tag" />
+                </div>
+                <div>
+                    <div id="results">The image Snapshot</div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <br />
+                    <button>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="takePicture.js"></script>
+</body>
+</html>
