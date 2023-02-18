@@ -19,4 +19,42 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="src\cascades\haarcascades\haarcascade_eye.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_eye_tree_eyeglasses.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_frontalcatface.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_frontalcatface_extended.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_frontalface_alt.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_frontalface_alt_tree.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_frontalface_alt2.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_frontalface_default.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_fullbody.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_lefteye_2splits.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_license_plate_rus_16stages.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_lowerbody.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_profileface.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_righteye_2splits.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_russian_plate_number.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_smile.xml" />
+    <Xml Include="src\cascades\haarcascades\haarcascade_upperbody.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_eye.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_eye_tree_eyeglasses.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_frontalface_alt.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_frontalface_alt_tree.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_frontalface_alt2.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_frontalface_default.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_fullbody.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_lefteye_2splits.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_lowerbody.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_profileface.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_righteye_2splits.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_smile.xml" />
+    <Xml Include="src\cascades\haarcascades_cuda\haarcascade_upperbody.xml" />
+    <Xml Include="src\cascades\hogcascades\hogcascade_pedestrians.xml" />
+    <Xml Include="src\cascades\lbpcascades\lbpcascade_frontalcatface.xml" />
+    <Xml Include="src\cascades\lbpcascades\lbpcascade_frontalface.xml" />
+    <Xml Include="src\cascades\lbpcascades\lbpcascade_frontalface_improved.xml" />
+    <Xml Include="src\cascades\lbpcascades\lbpcascade_profileface.xml" />
+    <Xml Include="src\cascades\lbpcascades\lbpcascade_silverware.xml" />
+  </ItemGroup>
 </Project>
