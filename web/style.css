@@ -1,5 +1,5 @@
 #indexDiv{
-    background-color: lightslategray;
+    background-color: #333333;
     margin: auto;
     width: 600px;
     height: 200px;
@@ -7,7 +7,7 @@
 }
 
 #loginDiv{
-    background-color: lightslategray;
+    background-color: #333333;
     margin: auto;
     width: 600px;
     height: 200px;
@@ -20,7 +20,7 @@
 }
 
 #captureImage{
-    background-color: lightslategray;
+    background-color: #333333;
     margin: auto;
     width: 600px;
     height: 930px;
@@ -28,7 +28,7 @@
 }
 
 #mainSite{
-    background-color: lightslategray;
+    background-color: #333333;
     margin: auto;
     width: 600px;
     height: 300px;
@@ -36,5 +36,6 @@
 }
 
 body{
-    background-color: black;
+    background-color: #F5F5F5;
+    color: #F5F5F5;
 }
