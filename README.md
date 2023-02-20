@@ -28,5 +28,3 @@ futtatás
 ``` bas
 ./main
 ```
-asd
-test2
