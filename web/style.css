@@ -4,6 +4,7 @@
     width: 600px;
     height: 200px;
     text-align: center;
+    border-radius: 15px;
 }
 
 #loginDiv{
@@ -12,6 +13,7 @@
     width: 600px;
     height: 200px;
     text-align: center;
+    border-radius: 15px;
 }
 
 .indexButton{
@@ -25,6 +27,7 @@
     width: 600px;
     height: 930px;
     text-align: center;
+    border-radius: 15px;
 }
 
 #mainSite{
@@ -33,6 +36,7 @@
     width: 600px;
     height: 300px;
     text-align: center;
+    border-radius: 15px;
 }
 
 body{
