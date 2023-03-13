@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../../style.css">;
 <?php
     $working_dir = getcwd();
     
@@ -9,20 +10,34 @@
     
     chdir($working_dir);
 
+    ?>
+
+    <div id="deleteImage">
+
+    <?php
     echo "<table>";
     echo "<tr><th>Image</th><th>Name</th><th>Delete</th></tr>";
-    
+
     foreach ($files as $file) {
         $image_name = pathinfo($file, PATHINFO_FILENAME);
-        
+        $encoded_image_name = urlencode($image_name);
+    
         echo "<tr>";
-        echo "<td><img src='images/$file' style='height: 200px; width: 200px;'/></td>";
+        echo "<td><img src='$img_dir" . urlencode($file) . "' style='height: 200px; width: 200px;'/></td>";
         echo "<td>$image_name</td>";
-        echo "<td><button onclick='deleteImage(\"$image_name\")'>Delete</button></td>";
+        echo "<td><button onclick='deleteImage(\"$encoded_image_name\")'>Delete</button></td>";
         echo "</tr>";
     }
     
+    
     echo "</table>";
+
+    ?>
+
+    </div>
+
+    <?php
+
 ?>
 
 <script>

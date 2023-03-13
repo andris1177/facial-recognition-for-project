@@ -19,9 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <Xml Include="src\cascades\haarcascades\haarcascade_eye.xml" />
     <Xml Include="src\cascades\haarcascades\haarcascade_eye_tree_eyeglasses.xml" />
     <Xml Include="src\cascades\haarcascades\haarcascade_frontalcatface.xml" />
@@ -58,6 +55,9 @@
     <Xml Include="src\cascades\lbpcascades\lbpcascade_frontalface_improved.xml" />
     <Xml Include="src\cascades\lbpcascades\lbpcascade_profileface.xml" />
     <Xml Include="src\cascades\lbpcascades\lbpcascade_silverware.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\image_to_xml.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

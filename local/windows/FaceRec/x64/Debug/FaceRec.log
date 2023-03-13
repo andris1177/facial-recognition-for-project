@@ -1,2 +1,2 @@
-﻿  main.cpp
-  FaceRec.vcxproj -> C:\github local\facial-recognition-for-project\local\windows\x64\Debug\FaceRec.exe
+﻿image_to_xml.obj : error LNK2019: unresolved external symbol "public: static struct cv::Ptr<class cv::face::LBPHFaceRecognizer> __cdecl cv::face::LBPHFaceRecognizer::create(int,int,int,int,double)" (?create@LBPHFaceRecognizer@face@cv@@SA?AU?$Ptr@VLBPHFaceRecognizer@face@cv@@@3@HHHHN@Z) referenced in function main
+C:\github local\facial-recognition-for-project\local\windows\x64\Debug\FaceRec.exe : fatal error LNK1120: 1 unresolved externals
