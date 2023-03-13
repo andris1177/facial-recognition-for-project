@@ -10,11 +10,11 @@
     
     chdir($working_dir);
 
-    ?>
+?>
 
-    <div id="deleteImage">
+<div id="deleteImage">
 
-    <?php
+<?php
     echo "<table>";
     echo "<tr><th>Image</th><th>Name</th><th>Delete</th></tr>";
 
@@ -32,13 +32,9 @@
     
     echo "</table>";
 
-    ?>
-
-    </div>
-
-    <?php
-
 ?>
+
+</div>
 
 <script>
     function deleteImage(imageName) {
