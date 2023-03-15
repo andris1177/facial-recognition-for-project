@@ -1,5 +1,3 @@
 web/adminSite/takePicture/images
 local/windows/dependences/opencv
-local/windows/.vs/FaceRec/v17/ipch/AutoPCH/a385ad79a311e55e/TESZT.ipch
-local/windows/.vs/FaceRec/v17/ipch/AutoPCH/63ca66b0ae6eab67/IMAGE_TO_XML.ipch
 local/linux/build
