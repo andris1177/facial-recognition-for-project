@@ -33,7 +33,6 @@ Desktop.ini
 *.vcproj
 *.vcxproj
 *.vcxproj.filters
-*.sln
 *.suo
 *.opensdf
 *.sdf
