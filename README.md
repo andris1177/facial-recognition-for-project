@@ -1,11 +1,11 @@
 # facial-recognition-for-project
-## window
-### Windowson nekem nem sikerült elérnem hogy működjön mert dlib telepítés nem futott le, ami kell az opencv-hez és a face_recognition modulhoz is.
+## windows
+### Windowson nekem nem sikerült elérnem, hogy működjön mert dlib telepítés nem futott le, ami kell az opencv-hez és a face_recognition modulhoz is.
 
 <br>
 
 ## linux
-### Itt nem volt a telepítéssel semmi baj. Futtatás elött a web/adminSite/takePicture mappában létre kell hozni egy images mappát, ide fogja az elkészült képeket menteni.
+### Itt nem volt a telepítéssel semmi baj. Futtatás előtt a web/adminSite/takePicture mappában létre kell hozni egy images mappát, ide fogja az elkészült képeket menteni.
 ``` bash
 git clone https://github.com/andris1177/facial-recognition-for-project.git
 cd /facial-recognition-for-project/local
@@ -14,8 +14,8 @@ python3 face_rec.py
 ```
 <br>
 
-## Web server
-### Bármilyen webserver jó én xampot használtam mert van beépített mysql adatbázisa
+## Web szerver
+### Bármilyen webszerver jó én apache-t használtzam xampon belül, mert van beépített mysql adatbázisa.
 
 <br>
 
