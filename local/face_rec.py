@@ -1,15 +1,16 @@
 import face_recognition
 import os
+import cv2
 
 known_faces = []
 known_names = []
-for filename in os.listdir('images'):
-    image = face_recognition.load_image_file(f'images/{filename}')
+for filename in os.listdir('../web/adminSite/takePicture/images/'):
+    image = face_recognition.load_image_file(f'../web/adminSite/takePicture/images/{filename}')
     face_encoding = face_recognition.face_encodings(image)[0]
     known_faces.append(face_encoding)
     known_names.append(os.path.splitext(filename)[0])
 
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture(1)
 
 while True:
     ret, frame = video_capture.read()
