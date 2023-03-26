@@ -1,37 +1,25 @@
 # facial-recognition-for-project
-## windows
-Ha szeretnéd használni a windows FaceRec-et akkot le kell tölteni az opecv-t és be kell rakni a facial-recognition-for-project\local\windows\dependences mappába
-és hozzá kell adni a windows rendszer változókhoz
-https://www.youtube.com/watch?v=trXs2r6xSnI iit egy videó hozzá
-ami it fontos az 1:50-től 3:00-ig van 
-az opencv elérési útja más lesz: 
-facial-recognition-for-project/local/windows/dependences/opencv/build/x64/vc16/bin/
-elötte persze oda kell tenni a projekt mappának az elérési útját pl:
-C:/user/desktop/
-https://github.com/opencv/opencv/releases/tag/4.7.0
-
-## linux
-Linux használatához telepíteni kell az OpneCV-t amihez itt egy tutorial:
-https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/
-
-
-``` bash
-git clone https://github.com/andris1177/facial-recognition-for-project.git
-cd  facial-recognition-for-project/local/linux
-mkdir build
-cd build
-cmake ../
-make
-```
-
-futtatás
-``` bas
-./main
-```
+## window
+### Windowson nekem nem sikerült elérnem hogy működjön mert dlib telepítés nem futott le, ami kell az opencv-hez és a face_recognition modulhoz is.
 
 <br>
 
-adatbázis létrehozása
+## linux
+### Itt nem volt a telepítéssel semmi baj. Futtatás elött a web/adminSite/takePicture mappában létre kell hozni egy images mappát, ide fogja az elkészült képeket menteni.
+``` bash
+git clone https://github.com/andris1177/facial-recognition-for-project.git
+cd /facial-recognition-for-project/local
+pip install -r requirements.txt
+python3 face_rec.py
+```
+<br>
+
+## Web server
+### Bármilyen webserver jó én xampot használtam mert van beépített mysql adatbázisa
+
+<br>
+
+## adatbázis létrehozása
 ``` sql
 CREATE DATABASE users;
 CREATE TABLE users (
