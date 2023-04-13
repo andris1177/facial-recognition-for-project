@@ -42,11 +42,6 @@
         var url = "deleteImage.php?imageName=" + imageName;
         window.location.href = url;
     };
-
-    function toggleMode() {
-          var bodyElement = document.getElementsByTagName("body")[0];
-          bodyElement.classList.toggle("light-mode");
-          bodyElement.classList.toggle("dark-mode");
-        }
 </script>
+<script src="../../darkMode.js"></script>
 </body>
