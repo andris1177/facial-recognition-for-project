@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
+<body class="light-mode">
     <div id="captureImage">
         <h1>
             Add faces
         </h1>
+        <button class="indexButton" onclick="toggleMode()">Change colore</button>
+        <br>
 
         <form method="POST" action="http://localhost/adminSite/takePicture/takePicture.php">
             <div>
@@ -28,13 +30,20 @@
                 <div>
                     <div id="results">The image Snapshot</div>
                 </div>
-                <div class="col-md-12 text-center">
+                <div>
                     <br />
-                    <button>Submit</button>
+                    <button class="indexButton">Submit</button>
                 </div>
             </div>
         </form>
     </div>
     <script src="takePicture.js"></script>
-</body>
+    <script>
+        function toggleMode() {
+          var bodyElement = document.getElementsByTagName("body")[0];
+          bodyElement.classList.toggle("light-mode");
+          bodyElement.classList.toggle("dark-mode");
+        }
+      </script>
+    </body>
 </html>

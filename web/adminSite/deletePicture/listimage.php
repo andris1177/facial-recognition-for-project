@@ -13,7 +13,8 @@
 ?>
 
 <div id="deleteImage">
-
+<body class="light-mode">
+<button class="indexButton" onclick="toggleMode()">Change colore</button>
 <?php
     echo "<table>";
     echo "<tr><th>Image</th><th>Name</th><th>Delete</th></tr>";
@@ -40,5 +41,12 @@
     function deleteImage(imageName) {
         var url = "deleteImage.php?imageName=" + imageName;
         window.location.href = url;
-    }
+    };
+
+    function toggleMode() {
+          var bodyElement = document.getElementsByTagName("body")[0];
+          bodyElement.classList.toggle("light-mode");
+          bodyElement.classList.toggle("dark-mode");
+        }
 </script>
+</body>

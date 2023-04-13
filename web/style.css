@@ -1,59 +1,69 @@
-#indexDiv{
+/* Light mode */
+.light-mode {
+    background-color: #FFFFFF;
+    color: #00CCFF;
+  }
+  
+  .light-mode #indexDiv,
+  .light-mode #loginDiv,
+  .light-mode #captureImage,
+  .light-mode #mainSite,
+  .light-mode #deleteImage {
     background-color: #333333;
+    color: #00CCFF;
+  }
+  
+  /* Dark mode */
+  .dark-mode {   
+    background-color: #333333;
+    color: #00CCFF;
+  }
+  
+  .dark-mode #indexDiv,
+  .dark-mode #loginDiv,
+  .dark-mode #captureImage,
+  .dark-mode #mainSite,
+  .dark-mode #deleteImage {
+    background-color: #ebe4e4;
+    color: #00CCFF;
+  }
+  
+  #indexDiv,
+  #loginDiv,
+  #captureImage,
+  #mainSite,
+  #deleteImage {
     margin: auto;
     width: 600px;
-    height: 200px;
     text-align: center;
     border-radius: 15px;
-}
-
-#loginDiv{
-    background-color: #333333;
-    margin: auto;
-    width: 600px;
+  }
+  
+  #indexDiv,
+  #loginDiv {
     height: 200px;
-    text-align: center;
-    border-radius: 15px;
-}
-
-.indexButton{
-    color: black;
-    border-radius: 15%;
-}
-
-#captureImage{
-    background-color: #333333;
-    margin: auto;
-    width: 600px;
+  }
+  
+  #captureImage {
     height: 930px;
-    text-align: center;
-    border-radius: 15px;
-}
-
-#mainSite{
-    background-color: #333333;
-    margin: auto;
-    width: 600px;
+  }
+  
+  #mainSite {
     height: 300px;
-    text-align: center;
-    border-radius: 15px;
-}
-
-#deleteImage{
-    background-color: #333333;
-    margin: auto;
+  }
+  
+  #deleteImage {
     width: 335px;
     height: 1000px;
-    text-align: center;
-    border-radius: 15px;
-}
-
-body{
-    background-color: #F5F5F5;
-    color: #F5F5F5;
-}
-
-#my_camera{
+  }
+  
+  .indexButton {
+    color: #02ccff;
+    border-radius: 5%;
+    background-color: #333333;
+    border-color: white;
+  }
+  
+  #my_camera {
     margin: 0 auto;
-}
-
+  }

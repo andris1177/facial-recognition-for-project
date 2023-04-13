@@ -7,11 +7,14 @@
             <title>Main site</title>
             <link rel="stylesheet" href="../style.css">
         </head>
-        <body>
+        <body class="light-mode">
             <div id="mainSite">
                 <h1>
                     Admin Site
                 </h1>
+                <button class="indexButton" onclick="toggleMode()">Change colore</button>
+                <br>
+                <br>
                 <a href="takePicture/takePicture.html">
                     <button class="indexButton">Add face</button>
                 </a>
@@ -21,5 +24,12 @@
                     <button class="indexButton">Manage faces</button>
                 </a>
             </div>
+            <script>
+                function toggleMode() {
+                  var bodyElement = document.getElementsByTagName("body")[0];
+                  bodyElement.classList.toggle("light-mode");
+                  bodyElement.classList.toggle("dark-mode");
+                }
+              </script>
         </body>
     </html>

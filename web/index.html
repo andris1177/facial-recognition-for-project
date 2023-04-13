@@ -7,11 +7,16 @@
             <link rel="stylesheet" href="style.css">
             <title>Facial Recognition For Project</title>
         </head>
-        <body>
+        <body class="light-mode">  
             <div id="indexDiv">
                 <h1>
                     Facel Recognition
                 </h1>
+
+                <br>
+                <br>
+
+                <button class="indexButton" onclick="toggleMode()">Change colore</button>
 
                 <br>
                 <br>
@@ -27,5 +32,13 @@
                     <button class="indexButton">Sign Up</button>
                 </a>
             </div>
+
+            <script>
+                function toggleMode() {
+                  var bodyElement = document.getElementsByTagName("body")[0];
+                  bodyElement.classList.toggle("light-mode");
+                  bodyElement.classList.toggle("dark-mode");
+                }
+              </script>
         </body>
     </html>

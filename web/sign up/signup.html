@@ -7,11 +7,13 @@
             <link rel="stylesheet" href="../style.css">
             <title>Sign up</title>
         </head>
-        <body>
+        <body class="light-mode">
             <div id="loginDiv">
                 <h1>
                     Sign up
                 </h1>
+                <button class="indexButton" onclick="toggleMode()">Change colore</button>
+                <br>
                 <br>
                 <form action="signup.php", method="post">
                     <input type="text" name="username" id="username" placeholder="username">
@@ -20,8 +22,15 @@
                     <input type="password" name="password" id="password" placeholder="password">
                     <br>
                     <br>
-                    <input type="submit">
+                    <input class="indexButton" type="submit">
                 </form>
             </div>
+            <script>
+                function toggleMode() {
+                  var bodyElement = document.getElementsByTagName("body")[0];
+                  bodyElement.classList.toggle("light-mode");
+                  bodyElement.classList.toggle("dark-mode");
+                }
+              </script>
         </body>
     </html>
