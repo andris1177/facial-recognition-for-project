@@ -1,6 +1,13 @@
 # facial-recognition-for-project
 ## windows
-### Windowson nekem nem sikerült elérnem, hogy működjön mert dlib telepítés nem futott le, ami kell az opencv-hez és a face_recognition modulhoz is.
+### Csak anacondaval tudtam telepíteni de ott működött. Anaconda letöltése után az anaconda powershell promton belül kell telepíteni a modulokat és futtatni a programot.
+``` powershell
+conda install -c conda-forge face-recognition
+conda install -c conda-forge opencv
+git clon https://github.com/andris1177/facial-recognition-for-project.git
+cd facial-recognition-for-project/local
+python face_rec.py
+```
 
 <br>
 
