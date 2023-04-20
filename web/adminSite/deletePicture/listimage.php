@@ -24,7 +24,7 @@
         $encoded_image_name = urlencode($image_name);
     
         echo "<tr>";
-        echo "<td><img src='$img_dir" . urlencode($file) . "' style='height: 200px; width: 200px;'/></td>";
+        echo "<td><img src='http://localhost/adminSite/takePicture/images/" . urlencode($file) . "' style='height: 200px; width: 200px;'/></td>";
         echo "<td>$image_name</td>";
         echo "<td><button onclick='deleteImage(\"$encoded_image_name\")'>Delete</button></td>";
         echo "</tr>";
