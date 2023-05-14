@@ -7,38 +7,37 @@
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="light-mode">
-    <div id="captureImage">
-        <h1>
-            Add faces
-        </h1>
-        <button class="indexButton" onclick="toggleMode()">Change colore</button>
-        <br>
+<body>
+    <body>
+        <div id="container">
+          <div id="formDiv">
+            <h1>Add faces</h1>
+            <form method="POST" action="http://localhost/adminSite/takePicture/takePicture.php">
+                <label class="custom-field two">
+                    <input type="text" placeholder="&nbsp;" id="urlInput" name="imagename" />
+                  <span class="placeholder">Enter your name</span>
+                </label>
+                <input type="hidden" name="image" class="image-tag" id="imageInput" />
+                <div class="form-controls">
+                  <input type="button" class="button" id="one" value="Take Snapshot" onClick="take_snapshot()" />
+                  <button class="button" id="submitBtn">Submit</button>
+                </div>
+              </form>
+              
+          </div>
+          <div id="imageDiv">
+            <div id="my_camera"></div>
+            <div id="results">The image Snapshot</div>
+          </div>
+        </div>
+        <script src="takePicture.js"></script>
+      </body>
 
-        <form method="POST" action="http://localhost/adminSite/takePicture/takePicture.php">
-            <div>
-                <div>
-                    <div id="my_camera"></div>
-                    <br/>
-                    <input type="button" value="Take Snapshot" onClick="take_snapshot()" />
-                    <input type="text" name="imagename" placeholder="Enter image name" />
-                    <input type="hidden" name="image" class="image-tag" />
-                </div>
-                <div>
-                    <div id="results">The image Snapshot</div>
-                </div>
-                <div>
-                    <br />
-                    <button class="indexButton">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <script src="takePicture.js"></script>
-    <script src="../../darkMode.js"></script>
+      <script src="valami.js"></script>
+        <script src="takePicture.js"></script>
 </body>
 
 </html>

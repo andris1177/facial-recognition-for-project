@@ -4,7 +4,7 @@ include '../connect.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT password FROM users WHERE username = '$username'";
+$sql = "SELECT password FROM felhasználó_adatok WHERE username = '$username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -7,23 +7,30 @@
             <title>Main site</title>
             <link rel="stylesheet" href="../style.css">
         </head>
-        <body class="light-mode">
-            <div id="mainSite">
-                <h1>
-                    Admin Site
-                </h1>
-                <button class="indexButton" onclick="toggleMode()">Change colore</button>
-                <br>
-                <br>
-                <a href="takePicture/takePicture.html">
-                    <button class="indexButton">Add face</button>
-                </a>
-                <br>
-                <br>
-                <a href="deletePicture/listimage.php">
-                    <button class="indexButton">Manage faces</button>
-                </a>
+        <body >
+            <div id="container">
+                <div id="indexDiv">
+                    <h1>
+                        Admin Site
+                    </h1>
+        
+                    <br>
+                    <br>
+                    <a href="takePicture/takePicture.html">
+                        <button class="button" id="one">
+                            <span>Add face</span>
+                        </button>
+                    </a>
+                    <br>
+                    <br>
+                    <a href="deletePicture/listimage.php">
+                        <button class="button" id="one">
+                            <span>Manage faces</span>
+                        </button>
+                    </a>
+                </div>
+                <img id="image" src="../placeholder.png" alt="Image description">
             </div>
-            <script src="../darkMode.js"></script>
-        </body>
     </html>
+
+

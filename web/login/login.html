@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-    <html lang="hu">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="../style.css">
-            <title>Login</title>
-        </head>
-        <body class="light-mode">
-            <div id="loginDiv">
-                <h1>
-                    Login
-                </h1>
-                <button class="indexButton" onclick="toggleMode()">Change colore</button>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Login</title>
+</head>
+
+<body class="light-mode">
+    <div id="container">
+        <div id="indexDiv">
+            <h1>
+                Login
+            </h1>
+
+            <br>
+            <br>
+
+            <form action="login.php" , method="post">
+                <label class="custom-field two">
+                <input type="text" placeholder="&nbsp;" id="username" name="username" />
+                  <span class="placeholder">Username</span>
+                </label>
                 <br>
                 <br>
-                <form action="login.php", method="post">
-                    <input type="text" name="username" id="username" placeholder="username">
-                    <br>
-                    <br>
-                    <input type="password" name="password" id="password" placeholder="password">
-                    <br>
-                    <br>
-                    <input class="indexButton" type="submit" value="login">
-                </form>
-            </div>
-            <script src="../darkMode.js"></script>
-        </body>
-    </html>
+                <label class="custom-field two">
+                <input type="password" placeholder="&nbsp;" id="paassword" name="password" />
+                      <span class="placeholder">password</span>
+                </label>
+                <br>
+                <br>
+                <input class="button" type="submit" value="login">
+            </form>
+
+        </div>
+        <img id="image" src="../placeholder.png" alt="Image description">
+    </div>
+
+</html>
