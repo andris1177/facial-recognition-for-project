@@ -1,6 +1,6 @@
 Webcam.set({
-    width: 1920,
-    height: 1080,
+    width: 490,
+    height: 390,
     image_format: "jpeg",
     jpeg_quality: 90,});
 
