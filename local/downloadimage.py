@@ -4,13 +4,12 @@ import os
 import shutil
 
 def delete_old_images():
-    for folder_name in os.listdir("positive/"):
-        folder_path = os.path.join("positive/", folder_name)
+    for folder_name in os.listdir("anchor/"):
+        folder_path = os.path.join("anchor/", folder_name)
         
         if os.path.isdir(folder_path):
             shutil.rmtree(folder_path)
-    print("All folders deleted!")
-    
+    print("Az összes régi képet tartalmazó mappa törlve.")
 
 def save_image_from_database():
     db = mysql.connector.connect(
@@ -22,20 +21,29 @@ def save_image_from_database():
 
     cursor.execute("SELECT image, name FROM projekt_feladat.képek")
 
+    count = 0  # Változó a képek számolásához
     for row in cursor:
         image_data = row[0]
         name = row[1]
         image_bytes = base64.b64decode(image_data)
         name_without_number = name.rstrip('0123456789')
 
-        directory = name_without_number.replace(" ", "_")  #
-        if not os.path.exists(os.path.join("anchor", directory)):
-            os.makedirs(os.path.join("anchor", directory))
+        if count < 25:
+            directory = name_without_number.replace(" ", "_") 
+            destination_folder = "anchor"
+        else:
+            directory = name_without_number.replace(" ", "_") 
+            destination_folder = "positive"
 
-        with open(os.path.join("anchor", directory, name + ".jpg"), "wb") as file:
+        if not os.path.exists(os.path.join(destination_folder, directory)):
+            os.makedirs(os.path.join(destination_folder, directory))
+
+        with open(os.path.join(destination_folder, directory, name + ".jpg"), "wb") as file:
             file.write(image_bytes)
 
-        print(f"Image '{name}' saved successfully.")
+        print(f"{name} Sikeresen mentve.")
+
+        count += 1
 
     cursor.close()
     db.close()
@@ -43,3 +51,5 @@ def save_image_from_database():
 def run():
     delete_old_images() 
     save_image_from_database()
+
+run()

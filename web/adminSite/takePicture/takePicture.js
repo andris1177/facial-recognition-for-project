@@ -1,6 +1,6 @@
 Webcam.set({
-    width: 490,
-    height: 390,
+    width: 250,
+    height: 250,
     image_format: "jpeg",
     jpeg_quality: 90,});
 
@@ -13,7 +13,6 @@ function take_snapshot() {
           document.getElementById("results").innerHTML +=
               '<img src="' + data_uri + '"/>';
           
-          // Add AJAX request to save the image
           $.ajax({
               type: "POST",
               url: "saveImage.php",

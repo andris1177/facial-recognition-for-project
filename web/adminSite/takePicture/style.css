@@ -135,4 +135,7 @@ html, body {
     background-size: 100% 0.15em, 100% 0.1em, 100%;
   }
   
-  
+#my_camera{
+  width: 400px;
+  height: 400px;
+}
