@@ -2,14 +2,22 @@ import mysql.connector
 import base64
 import os
 
-def delete_old_images():
-    folder_path = "images/" 
+folder_path = "images/"
 
+def check_createfolder():
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        print(f"Folder '{folder_path}' created.")
+    else:
+        print(f"Folder '{folder_path}' already exists.")
+
+def delete_old_images():
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         
         if os.path.isfile(file_path):
             os.remove(file_path)
+    print("Old image deleted!")
 
 def save_image_from_database():
     db = mysql.connector.connect(
@@ -35,5 +43,6 @@ def save_image_from_database():
     cursor.close()
     db.close()
 
+check_createfolder()
 delete_old_images()
 save_image_from_database()
