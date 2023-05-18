@@ -1,16 +1,24 @@
 # facial-recognition-for-project
 ## windows
 ``` powershell
-
+git clone https://github.com/andris1177/facial-recognition-for-project.git
+cd facial-recognition-for-project/local
+pip install -r requirements.txt
+python train_data_nem_az_igazán_jó.py
+python facere.py
 ```
 
 <br>
 
-## linux
+## Linux
 ``` bash
-
+git clone https://github.com/andris1177/facial-recognition-for-project.git
+cd facial-recognition-for-project/local
+pip3 install -r requirements.txt
+python3 train_data_nem_az_igazán_jó.py
+python3 facere.py
 ```
-<br>
+
 ## Web szerver
 ### Bármilyen webszerver jó én apache-t használtzam xampon belül, mert van beépített mysql adatbázisa.
 
