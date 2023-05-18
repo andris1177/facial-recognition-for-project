@@ -35,8 +35,8 @@ print(gpus)
 """
 
 # ez akkor kéne ha gpu-val tanítanám az adatot de valamiért nem ismeri fel a videókártyámat 
-# ha ketörlöd a kommentet és megjelenik pl: (name='/phisical_device:GPU:0', device_type='GPU')
-# akkor használhatod ha nem akkor hagy kikommentelve
+# ha kitörlöd a kommentet és megjelenik pl: (name='/phisical_device:GPU:0', device_type='GPU')
+# akkor használhatod ha nem akkor hagyd kikommentelve
 
 
 # a mérete miatt nem tudtam feltölteni ide de innen le kell tölteni All images as gzipped tar file
