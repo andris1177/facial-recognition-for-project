@@ -1,3 +1,3 @@
-local/datset/
-local/training_checkpoints
+local/tensorflow-al/datset/
+local/tensorflow-al/training_checkpoints
 loacl/siamesemodelv2.h5
