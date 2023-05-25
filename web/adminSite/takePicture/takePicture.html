@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html lang="hu">
-
-<head>
+  <head>
     <title>
-        Add face
+      Add face
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 
-<body>
-    <body>
-        <div id="container">
-          <div id="formDiv">
-            <h1>Add faces</h1>
-            <form method="POST" action="http://localhost/adminSite/takePicture/takePicture.php">
-                <label class="custom-field two">
-                    <input type="text" placeholder="&nbsp;" id="urlInput" name="imagename" />
-                  <span class="placeholder">Enter your name</span>
-                </label>
-                <input type="hidden" name="image" class="image-tag" id="imageInput" />
-                <div class="form-controls">
-                  <input type="button" class="button" id="one" value="Take Snapshot" onClick="take_snapshot()" />
-                  <button class="button" id="submitBtn">Submit</button>
-                </div>
-              </form>
-              
-          </div>
-          <div id="imageDiv">
-            <div id="my_camera"></div>
-            <div id="results">The image Snapshot</div>
-          </div>
+  <body>
+    <div id="container">
+      <div id="formDiv">
+        <h1>Add faces</h1>
+
+        <label class="custom-field two">
+        <input type="text" placeholder="&nbsp;" id="imagename" name="imagename" />
+        <span class="placeholder">Enter your name</span>
+        </label>
+        <input type="hidden" name="image" class="image-tag" id="imageInput" />
+        <div class="form-controls">
+        <input type="button" class="button" id="one" value="Take Snapshot" onClick="take_snapshot()" />
         </div>
-        <script src="takePicture.js"></script>
-      </body>
 
-      <script src="valami.js"></script>
-        <script src="takePicture.js"></script>
-</body>
-
+        </div>
+        <div id="imageDiv">
+        <div id="my_camera"></div>
+        <div id="results">The image Snapshot</div>
+      </div>
+    </div>
+    <script src="takePicture.js"></script>
+  </body>
 </html>

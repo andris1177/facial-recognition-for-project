@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <title>Sign up</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>Sign up</title>
-</head>
-
-<body>
-    <div id="container">
-        <div id="indexDiv">
-            <h1>
-                Sign up
-            </h1>
-
-            <form action="signup.php" , method="post">
-                <label class="custom-field two">
-                <input type="text" placeholder="&nbsp;" id="username" name="username" />
-                    <span class="placeholder">Username</span>
-                </label>
-                <br>
-                <br>
-                <label class="custom-field two">
-                <input type="password" placeholder="&nbsp;" id="paassword" name="password" />
-                    <span class="placeholder">password</span>
-                </label>
-                <br>
-                <br>
-                <input class="button" type="submit" value="Sign up">
-            </form>
-
-            <br>
-            <br>
-
+    <body>
+        <div id="container">
+            <div id="indexDiv">
+                <h1>
+                    Sign up
+                </h1>
+                <form action="signup.php" , method="post">
+                    <label class="custom-field two">
+                        <input type="text" placeholder="&nbsp;" id="username" name="username" />
+                        <span class="placeholder">Username</span>
+                    </label>
+                    <br><br>
+                    <label class="custom-field two">
+                        <input type="password" placeholder="&nbsp;" id="paassword" name="password" />
+                        <span class="placeholder">password</span>
+                    </label>
+                    <br><br>
+                    <input class="button" type="submit" value="Sign up">
+                </form>
+                <br><br>
+            </div>
+            <img id="image" src="../placeholder.png" alt="Image description">
         </div>
-        <img id="image" src="../placeholder.png" alt="Image description">
-    </div>
-</body>
-
+    </body>
 </html>
