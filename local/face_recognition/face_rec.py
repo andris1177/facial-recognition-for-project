@@ -1,61 +1,55 @@
-import face_recognition
-import os
+import threading
 import cv2
+import os
+from deepface import DeepFace
 
-# létrehoz két listát
-known_faces = []
-known_names = []
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 
-# végigmegy a megadott mappában lévő fájlokon
-# és a neveiket belerakja a known_names be
-# a képből létrehoz egy arclenyomatot
-for filename in os.listdir('../web/adminSite/takePicture/images/'):
-    image = face_recognition.load_image_file(f'../web/adminSite/takePicture/images/{filename}')
-    face_encodings = face_recognition.face_encodings(image)
-    if len(face_encodings) > 0:
-        face_encoding = face_encodings[0]
-        known_faces.append(face_encoding)
-        known_names.append(os.path.splitext(filename)[0])
-    else:
-        # handle the case where no face was found in the image
-        print(f"No face found in {filename}")
-        continue
+counter = 0
+face_match = False
+dataset_path = "dataset"
 
-# inicializálja a kamerát
-video_capture = cv2.VideoCapture(0)
+def check_face(frame, reference_img, file_name):
+    global face_match
+    try:
+        if DeepFace.verify(frame, reference_img)['verified']:
+            face_match = True
+            print("Match found:", file_name)
+
+        else:
+            face_match = False
+
+    except ValueError:
+        face_match = False
+        
+
+def recognize_faces():
+    for file_name in os.listdir(dataset_path):
+        if file_name.endswith(".jpg"):
+            reference_img = cv2.imread(os.path.join(dataset_path, file_name))
+            threading.Thread(target=check_face, args=(frame.copy(), reference_img.copy(), file_name)).start()
+
 
 while True:
-    # minden ciklusnál az aktuális képkoclát hasuználja
-    ret, frame = video_capture.read()
+    ret, frame = cap.read()
+    
+    if ret:
+        if counter % 30 == 0:
+            threading.Thread(target=recognize_faces).start()
 
-    # átalakítja a BGR képet RGB-vé
-    rgb_frame = frame[:, :, ::-1]
+        counter += 1
 
-    # meghatározza az arc helyét
-    face_locations = face_recognition.face_locations(rgb_frame)
-    # elkészíti az arclenyomatot
-    face_encodings = face_recognition.face_encodings(rgb_frame, face_locations)
+        if face_match:
+            cv2.putText(frame, "MATCH", (20, 450), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
+        else:
+            cv2.putText(frame, "NO MATCH", (20, 450), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
 
-    # összehasonlítja a mostani arclenyomatot az ism,ert arclenyomattal 
-    for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
-        matches = face_recognition.compare_faces(known_faces, face_encoding)
+        cv2.imshow("Video", frame)
 
-        # ha nem ismeri akkor a név Unknown
-        name = "Unknown"
-
-        # ha igen akkor beállítja a nevet az eggyező arcéra
-        if True in matches:
-            first_match_index = matches.index(True)
-            name = known_names[first_match_index]
-
-        # megjelenít egy négyzetet az arc köré és odaírja a nevet
-        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-        cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
-
-    cv2.imshow('Video', frame)
-
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    key = cv2.waitKey(1)
+    if key == ord("q"):
         break
 
-video_capture.release()
 cv2.destroyAllWindows()

@@ -14,11 +14,13 @@ def check_create_folder(folder_path):
         print(f"{folder_path} folder already exists.")
 
 def delete_old_images():
-    for folder_name in os.listdir("dataset/"):
-        folder_path = os.path.join("dataset/")
-        
-        if os.path.isdir(folder_path):
-            shutil.rmtree(folder_path)
+    file_list = os.listdir("dataset/")
+
+    # Iterate over the files and delete them one by one
+    for file_name in file_list:
+        file_path = os.path.join("dataset/", file_name)  # Get the full file path
+        if os.path.isfile(file_path):  # Check if it's a file
+            os.remove(file_path)  # Delete the file
     print("Az összes régi képet tartalmazó mappa törlve.")
 
 def save_image_from_database():
@@ -38,10 +40,9 @@ def save_image_from_database():
             image_bytes = base64.b64decode(image_data)
             name_without_number = name.rstrip('0123456789')
 
-            directory = name_without_number.replace(" ", "_")
             destination_folder = "dataset"
 
-            with open(os.path.join(destination_folder, name + ".jpg"), "wb") as file:
+            with open(os.path.join(destination_folder +"/" +name_without_number + ".jpg"), "wb") as file:
                 file.write(image_bytes)
 
             print(f"{name} successfully saved.")
