@@ -1,26 +1,56 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Person Images</title>
+  <style>
+    .person {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    .person img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Person Images</h1>
 
-if (isset($_GET['imageName'])) {
-    $imageName = $_GET['imageName'];
+  <?php
+  include "../../connect.php";
 
-    $folderPath = '../takePicture/images/';
+$sql = "SELECT * FROM képek";
+$result = $conn->query($sql);
 
-    if (file_exists($folderPath . $imageName . '.jpg')) {
-        if (unlink($folderPath . $imageName . '.jpg')) {
-            // sikeres törlés
-            echo 'Image "' . $imageName . '" was deleted.';
-            header('Location: listimage.php');
-            exit;
-        } else {
-            // nem sikerült a képet törölni
-            echo 'Error: Failed to delete image "' . $imageName . '".';
+if ($result->num_rows > 0) {
+    $counter = 1; 
+
+    while ($row = $result->fetch_assoc()) {
+        $personName = preg_replace('/\d/', '', $row['name']); 
+        $imageData = $row['image'];
+
+        if ($counter % 50 == 1) {
+            echo '<div class="person">';
+            echo '<img src="data:image/jpeg;base64,' . $imageData . '" alt="' . $personName . '">';
+            echo '<br>';
+            echo '<span>' . $personName . '</span>'; // 
+            echo '<br>';
+            echo '<a href="delete.php?person=' . $personName . '">Delete</a>';
+            echo '</div>';
         }
-    } else {
-        echo 'Error: Image file "' . $imageName . '" does not exist.';
+
+        $counter++; 
     }
 } else {
-    echo 'Error: Image name not provided.';
+    echo "No images found.";
 }
 
+$conn->close();
 ?>
 
+
+
+</body>
+</html>
