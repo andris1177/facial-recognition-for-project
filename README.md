@@ -1,4 +1,7 @@
 # facial-recognition-for-project
+
+## lfw letöltési link: http://vis-www.cs.umass.edu/lfw/#download
+
 ## windows
 ``` powershell
 git clone https://github.com/andris1177/facial-recognition-for-project.git
