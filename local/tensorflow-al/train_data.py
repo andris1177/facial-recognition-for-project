@@ -53,8 +53,8 @@ if len(contents) == 0:
 else:
     print("A képke már a negative mappában vannak.")
 
-anchor = tf.data.Dataset.list_files("dataset/positive/andris/*.jpg").take(25)
-positive =  tf.data.Dataset.list_files("dataset/positive/andris/*.jpg").take(25)
+anchor = tf.data.Dataset.list_files("dataset/positive/Andris/*.jpg").take(25)
+positive =  tf.data.Dataset.list_files("dataset/positive/Andris/*.jpg").take(25)
 negative =  tf.data.Dataset.list_files("dataset/negative/*.jpg").take(25)
 
 def preprocess(file_path):

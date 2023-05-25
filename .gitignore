@@ -1,3 +1,4 @@
-local/tensorflow-al/datset/
+local/tensorflow-al/dataset
+local/tensorflow-al/siamesemodelv2.h5
 local/tensorflow-al/training_checkpoints
-loacl/siamesemodelv2.h5
+local/face_recognition/dataset
