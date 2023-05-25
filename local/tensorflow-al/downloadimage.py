@@ -13,7 +13,7 @@ def delete_old_images():
 
 def save_image_from_database():
     db = mysql.connector.connect(
-        host="localhost",
+        host="192.68.1.126",
         user="root",
         password="")
 

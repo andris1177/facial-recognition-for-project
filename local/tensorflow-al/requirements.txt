@@ -1,4 +1,5 @@
 tensorflow
-tensorflow-gpu
+#tensorflow-gpu
 opencv-python
 matplotlib
+mysql.connector
