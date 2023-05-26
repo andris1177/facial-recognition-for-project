@@ -5,7 +5,7 @@
 ## windows
 ``` powershell
 git clone https://github.com/andris1177/facial-recognition-for-project.git
-cd facial-recognition-for-project/local
+cd facial-recognition-for-project/local/tensorflow-al
 pip install -r requirements.txt
 python train_data.py
 python facere.py
@@ -16,7 +16,7 @@ python facere.py
 ## Linux
 ``` bash
 git clone https://github.com/andris1177/facial-recognition-for-project.git
-cd facial-recognition-for-project/local
+cd facial-recognition-for-project/local/tesorflow-al
 pip3 install -r requirements.txt
 python3 train_data.py
 python3 facere.py
