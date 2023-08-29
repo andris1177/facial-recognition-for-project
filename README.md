@@ -23,7 +23,7 @@ python3 facere.py
 ```
 
 ## Web szerver
-### Bármilyen webszerver jó én apache-t használtzam xampon belül, mert van beépített mysql adatbázisa.
+### Bármilyen webszerver jó én apache-t használtam xampon belül, mert van beépített mysql adatbázisa.
 
 <br>
 
